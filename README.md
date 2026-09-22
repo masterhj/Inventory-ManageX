@@ -1,10 +1,22 @@
-# Inventory ManageX API
+# Stock Management System
 
-Inventory ManageX is a Spring Boot REST API for managing products, inventory movements, suppliers, customers, sales, and operational reporting for a small retail business.
+> A web-based inventory management system designed for small retail businesses.
 
-The application is designed as a backend service: it exposes a documented HTTP API, persists operational data in MySQL, and enforces role-based access through JWT authentication.
+## About
 
-## Highlights
+The **Stock Management System** is a REST API built with **Spring Boot** for teams that need a dependable way to manage products, sales, customers, suppliers, and stock in one place.
+
+It is built around day-to-day retail operations: clear inventory visibility, low-stock alerts, traceable sales, and reporting that helps store teams make practical decisions. The API is backed by MySQL, documented with OpenAPI, and protected with JWT-based role access.
+
+## Goals
+
+- Give store owners real-time visibility into inventory.
+- Track sales and associate them with customers.
+- Surface low-stock conditions before they become operational issues.
+- Provide useful reporting for products, revenue, payments, and sales activity.
+- Support clear access boundaries for owners, administrators, and operators.
+
+## Core capabilities
 
 - Product catalogue with brands, categories, suppliers, active-state controls, and barcode lookup.
 - Inventory movement tracking for entries, exits, adjustments, and sales.
