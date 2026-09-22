@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: himanshu-jaiswal-system
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+
+  flyway:
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+    baseline-version: 1
+
+  data:
+    web:
+      pageable:
+        one-indexed-parameters: false
+        default-page-size: 20
+
+logging:
+  level:
+    root: INFO
+
+springdoc:
+  paths-to-match: /**
+  swagger-ui:
+    use-root-path: true
+    path: /swagger-ui.html
+  api-docs:
+    path: /api-docs
+
+security:
+  jwt:
+    secret: ${JWT_SECRET}
+    expiration: ${JWT_EXPIRATION}
+    refresh-expiration: ${JWT_REFRESH_EXPIRATION}
