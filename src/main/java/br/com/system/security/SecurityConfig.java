@@ -60,6 +60,7 @@ public class SecurityConfig {
 
                         // rotas do OWNER e ADMIN
                         .requestMatchers("/analytics/**").hasAnyAuthority("ROLE_OWNER", "ROLE_ADMIN")
+                        .requestMatchers("/assistant/**").hasAnyAuthority("ROLE_OWNER", "ROLE_ADMIN")
                         .requestMatchers("/suppliers/**").hasAnyAuthority("ROLE_OWNER", "ROLE_ADMIN")
                         .requestMatchers("/categories/**").hasAnyAuthority("ROLE_OWNER", "ROLE_ADMIN")
                         .requestMatchers("/brands/**").hasAnyAuthority("ROLE_OWNER", "ROLE_ADMIN")

@@ -50,6 +50,7 @@ DB_PASSWORD=change-me
 JWT_SECRET=use-a-long-random-secret
 JWT_EXPIRATION=3600000
 JWT_REFRESH_EXPIRATION=604800000
+OPENAI_API_KEY=your-openai-api-key
 ```
 
 Start the stack:
@@ -73,6 +74,7 @@ export DB_PASSWORD='change-me'
 export JWT_SECRET='use-a-long-random-secret'
 export JWT_EXPIRATION='3600000'
 export JWT_REFRESH_EXPIRATION='604800000'
+export OPENAI_API_KEY='your-openai-api-key'
 
 mvn spring-boot:run
 ```
@@ -106,6 +108,7 @@ Authorization: Bearer <access-token>
 | Stock movements | `/stock-movements` |
 | Alerts | `/alerts` |
 | Analytics | `/analytics` |
+| AI assistant | `/assistant/chat` |
 
 Access is governed by `ROLE_OWNER`, `ROLE_ADMIN`, and `ROLE_OPERATOR`. The security configuration defines the allowed operations for each route group.
 
